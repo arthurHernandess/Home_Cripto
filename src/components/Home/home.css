@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* --------------------------------------------------------GERAIS-------------------------------------------------------- */
+*{
+    scroll-behavior: smooth;
+    transition: 0.1s;
+}
+.tela-home{
+    padding-top: 8rem;
+}
+
+.tituloParag{
+    white-space: nowrap;
+   
+}
+
+.img-controle{
+    display: none;
+}
+
+.section{
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    margin-top: 6.5rem;    
+    transition: none;
+    margin-bottom:12vh;
+    
+}
+
+#luz{
+    user-select: none;
+    width:30rem;
+    height:30rem;
+    position: fixed;
+    left:-5vw;
+    top: -5vw;
+    z-index: -1;
+}
+
+.divMain{
+    width: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#dm2{ flex-direction: column;}
+#dm3{margin-top: 17vh; justify-content: space-evenly;}
+#dm4{margin-top: 2vh;  width:100%; flex-direction: column;}
+
+/*-------------------------------------------------RESPONSIVIDADE (TABLET)------------------------------------------------------ */
+@media (max-width: 800px) {
+    .vetorControle {
+        display: none;
+    }
+    .divEsquerda {
+        min-width: 100%;
+        align-items: center !important;
+    }
+    .jogosLosango {
+        width: 100%
+    }
+
+    .piramideSection4 {
+        display: none;
+    }
+    .textoSec4 {
+        margin-left: 6.5rem;
+        margin-right: 6.5rem;
+    }
+
+}
+@media (max-width: 400px) {
+    
+    .tituloParag{
+        white-space: nowrap;
+        font-size: 1.7rem;
+       
+    }
+
+     
+}
+
+@media (min-width: 1900px){
+    p{
+        line-height: 3rem;
+    }
+}
+/*-------------------------------------------------RESPONSIVIDADE (MOBILE)------------------------------------------------------ */
+@media (max-width: 600px) {
+    #elementosGraficosGrid {
+        opacity: 0;
+    }
+    .jogosLosango div:first-child{
+        display: none;
+
+    }
+    
+    .img-controle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .imgJogos{
+             width: 100%;
+    }
+    
+  
+    #dm3{margin-top: 0; justify-content: space-evenly;}
+    
+    .losBrilhante {
+        display: none;
+    }
+    .bolinhaBrilhante {
+        display: none;
+    }
+    .jogosLosango{
+        display: none !important;
+    }
+}
+
+/* ---------------------------------------------------PARAGRAFOS SEC 2,3,4------------------------------------------------------ */
+.g{
+    font-family: 'Tomorrow';
+    text-align: center;
+    color:white;
+    font-size: 6vh;
+    font-weight: 600;
+    line-height: 48px;
+    text-shadow: 0 0 30px rgba(245, 245, 245, 0.3); 
+}
+.introducao{
+    text-align: center;
+    color:white;
+    font-family: 'Poppins';
+    font-size: 2.5vh;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 18%;
+    margin-left: 18%;
+    margin-top: 4%;
+    margin-bottom: 2.7%;
+    z-index:1;
+}
+
+
+
+/* ---------------------------------------------------------SECTION 1------------------------------------------------------ */
+.divEsquerda{
+    width:50%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+#imgTitulo{
+    width: 100%;
+}
+.divTitulo{
+    user-select: none;
+    width:75%;
+    display:flex;
+    align-items: center;
+    font-family: 'Tomorrow';
+    font-size: 72%;
+    font-weight: 400;
+    line-height: 15.6px;
+    letter-spacing: 0.82em;
+    text-align: center;
+    color:white;
+    flex-direction: column;
+    margin-bottom:5%;
+    z-index: 1;
+}
+
+.jogosLosango{
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.losango{
+    transform: rotate(45deg);
+}
+
+.vetorControle{
+    width:50%;
+    height:35vw;
+    background-image: url('../../assets/images/controle.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.quadroJogos{
+    border-radius: 15%;
+    border: 0.5vh solid #d9d9d9;
+    position: relative;
+    width: 17vh;
+    height: 17vh;
+    overflow: hidden;
+}
+.imgJogos{
+    height:inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: flex;
+}
+.imgJogos.L1, .imgJogos.L2, .imgJogos.L3, .imgJogos.L4{
+    width: 132.8%;
+    height: 131.4%;
+    margin: -15.8%;
+    transform: rotate(-45deg);
+}
+
+.jogosQuadrado{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding-top: 5rem;
+    height: auto;
+}
+
+.quadroJogos.dois{ z-index: 2; width:20vh; height:20vh; }
+
+
+
+/* ---------------------------------------------------------SECTION 2------------------------------------------------------ */
+.quadroJogos.quatro{right:-2vh} .quadroJogos.oito{left:-2vh} 
+.quadroJogos.quatro, .quadroJogos.oito {
+    width: 15vh;
+    height: 15vh;
+    top: -4vh;
+    z-index: 0;
+}
+.quadroJogos.cinco{right:-1vh} .quadroJogos.sete{left:-1vh}
+.quadroJogos.cinco, .quadroJogos.sete {
+    width: 17vh;
+    height: 17vh;
+    top: -2vh;
+    z-index: 1;
+}
+.quadroJogos.seis {
+    width: 20vh;
+    height: 20vh;
+    z-index: 2;
+}
+
+#elementosGraficosGrid {
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    z-index:0;
+    user-select: none;
+}
+#elementosGraficosGrid img{position:relative;}
+#p1{width: 45%; left:-25%; top:10%} #p2{width:45%; right:-25%} #d1{width:8%; right:-28%; top:5%} #d2{width:8%; left:-25%}
+
+
+
+/* ---------------------------------------------------------SECTION 3------------------------------------------------------ */
+.vetorNave{
+    width:40%;
+    height:35vw;
+    background-image: url('../../assets/images/nave.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.i2{
+    margin-left: 6%;
+    margin-right: 6%;
+}
+#dm3 #d1{ margin:auto; transform: rotate(23deg);}
+
+.i3{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+
+/* ---------------------------------------------------------SECTION 4------------------------------------------------------ */
+#dm4 .quadroJogos {
+    margin: 3%; 
+    /* box-shadow: 0 0 10px rgba(255, 0, 204, 0.5), 0 0 20px rgba(51, 51, 255, 0.5);  */
+    box-shadow: 0 0 10px rgba(245, 245, 245, 0.5); 
+}
+
+#dm4 .jogosLosango{
+    width: 100vw;
+}
+#dm4 #p2{ width:25%; height: 60vh; position:relative; left:-5vh; margin:1%; top: 15vh; transform: rotate(-5deg)}
+#dm4 #p1{ width:25%; height: 60vh; position:relative; left: 5vh; margin:1%; top: 15vh}
+
+.textoSec4{
+    display: flex;
+    flex-direction: row;
+}
+
+.losBrilhante{
+    box-shadow: 0 0 10px rgba(245, 245, 245, 0.7); 
+    width:1.4vw;
+    height: 1.4vh;
+    background-color: white;
+    transform: rotate(45deg);
+    margin: 5vh;
+}
+.bolinhaBrilhante{
+    box-shadow: 0 0 10px rgba(245, 245, 245, 0.7); 
+    width:0.8vh;
+    height: 0.8vh;
+    background-color: white;
+    border-radius: 50%;
+}
